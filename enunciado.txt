@@ -1,0 +1,21 @@
+Implemente o Analisador Léxico, Sintático e Semântico da gramática a seguir. Como resultado é esperado que o programa calcule o resultado da expressão passada por parâmetro. Poderá ser utilizado o analisador sintático descendente não recursivo e/ou o ascendente. NÃO será permitido o analisador sintático recursivo. Não será permitido o uso de expressões regulares.
+
+<E> -> <E>+<T> | <E>-<T> | <T>
+
+<T> -> <T>*<P> | <T>/<P> | <P>
+
+<P> -> <P>^<F> | exp[<F>] | <F>
+
+<F> -> (<E>) | id
+
+id = número inteiro ou real
+
+Exemplos:
+
+1+2*3^4  			//163
+
+(1+2)*3^4 			//243
+
+1+(2*3)^4 			//1297
+
+1+(2*3)+exp[4] 	       //61,598150033
